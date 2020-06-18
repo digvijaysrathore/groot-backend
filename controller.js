@@ -35,4 +35,16 @@ router.get("/getdistrict/:district", (req, res) => {
 	)
 });
 
+router.get("/getfarms", (req, res) => {
+	Farm.find(
+		(err, famrs) => {
+			if(err){
+				return res.status(400).json({
+					err: "Oops!"
+				})
+			} res.json(famrs)
+		}
+	)
+})
+
 module.exports = router;
