@@ -36,8 +36,7 @@ const farmSchema = new Schema({
 	},
 	facebook: {
 		type: String
-	},
-	images: []
+	}
 }, {timestamps: true});
 
 module.exports = mongoose.model("Farm", farmSchema);
