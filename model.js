@@ -7,14 +7,6 @@ const farmSchema = new Schema({
 		required: true,
 		unique: true
 	},
-	userkey: {
-		type: String,
-		required: true
-	},
-	nick: {
-		type: String,
-		required: true
-	},
 	owner: {
 		type: String,
 		required: true
@@ -28,14 +20,16 @@ const farmSchema = new Schema({
 		required: true
 	},
 	address: {
-		type: String
+		type: String,
+		required: true
 	},
 	email: {
 		type: String,
 		required: true
 	},
 	facebook: {
-		type: String
+		type: String,
+		required: true
 	}
 }, {timestamps: true});
 
