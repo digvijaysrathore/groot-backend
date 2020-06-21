@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const farmSchema = new Schema({
 	farmkey: {
 		type: String,
-		required: true,
-		unique: true
+		required: true
 	},
 	owner: {
 		type: String,
