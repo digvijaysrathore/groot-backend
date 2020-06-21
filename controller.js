@@ -42,6 +42,19 @@ router.get("/getdistrict/:district", (req, res) => {
 	)
 });
 
+router.get("/getfarm/:key", (req, res) => {
+	Farm.findOne(
+		{"farmkey":	req.params.key},
+		(err, farm) => {
+			if(err){
+				return res.status(400).json({
+					err: err
+				})
+			} res.json(farm)
+		}
+	)
+});
+
 router.get("/getfarms", (req, res) => {
 	Farm.find(
 		(err, famrs) => {
